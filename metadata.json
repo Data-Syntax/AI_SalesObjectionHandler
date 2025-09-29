@@ -1,0 +1,6 @@
+{
+  "name": "Sales Objection Handler",
+  "description": "Helps sales teams generate AI-powered responses to customer objections using Gemini.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

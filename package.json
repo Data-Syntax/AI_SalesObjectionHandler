@@ -1,0 +1,8 @@
+{
+  "name": "sales-objection-handler",
+  "version": "1.0.0",
+  "description": "An AI-powered web app that provides sales teams with instant, structured rebuttals to customer objections, optionally using a custom sales playbook.",
+  "dependencies": {
+    "@google/genai": "^0.8.0"
+  }
+}

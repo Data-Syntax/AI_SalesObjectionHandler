@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Objection Handler</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Add client-side library for .docx parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.7.2/mammoth.browser.min.js"></script>
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="header-content">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#007bff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="header-icon"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                <div>
+                    <h1>Sales Objection Handler</h1>
+                    <p class="tagline">Get AI-powered responses to customer objections, tailored by your own sales framework.</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content-wrapper">
+            <aside class="info-sidebar">
+                <div class="collapsible-section">
+                    <button class="collapsible-trigger" aria-expanded="true" aria-controls="framework-details">
+                        Objection Handling Framework <span class="arrow">▼</span>
+                    </button>
+                    <div id="framework-details" class="collapsible-content" style="display: block;">
+                        <div class="framework-subsection">
+                            <h3>4 Main Types of Sales Objections:</h3>
+                            <ul>
+                                <li><strong>Budget:</strong> The prospect claims they don't have the money.</li>
+                                <li><strong>Authority:</strong> The prospect says they are not the decision-maker.</li>
+                                <li><strong>Need:</strong> The prospect doesn't believe they need the product.</li>
+                                <li><strong>Urgency:</strong> The prospect believes fixing the problem is not a priority.</li>
+                            </ul>
+                        </div>
+                        <div class="framework-subsection">
+                            <h3>3-Step Objection Handling Process:</h3>
+                            <ol>
+                                <li><strong>Acknowledge and Validate:</strong> Show their concerns are important.</li>
+                                <li><strong>Pivot with a Question:</strong> Reframe the conversation or evaluate challenges.</li>
+                                <li><strong>Present the Solution:</strong> Explain how your product solves their pain points.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main class="app-main-column">
+                <section class="input-area">
+                    <label for="objection-input">Enter Customer Objection:</label>
+                    <textarea id="objection-input" rows="4" placeholder="e.g., 'Your price is too high.' or 'I need to think about it.'"></textarea>
+                    <button id="submit-button" aria-label="Get Rebuttal">Get Rebuttal</button>
+                    <div id="status-message" class="status-message" aria-live="polite"></div>
+                </section>
+
+                <section class="response-area">
+                    <h2>Suggested Response:</h2>
+                    <div id="response-output" class="response-output" aria-live="polite">
+                        <p>Your AI-generated rebuttal, structured by the 3-step process, will appear here.</p>
+                    </div>
+                </section>
+            </main>
+            <aside class="actions-sidebar">
+                <div class="collapsible-section">
+                    <button class="collapsible-trigger" aria-expanded="true" aria-controls="try-examples-details">
+                        Try an Example <span class="arrow">▼</span>
+                    </button>
+                    <div id="try-examples-details" class="collapsible-content" style="display: block;">
+                        <p>Click an objection below to see an instant, AI-generated response.</p>
+                        <div class="example-buttons">
+                            <button class="example-button">Your price is too high.</button>
+                            <button class="example-button">We need to discuss this internally.</button>
+                            <button class="example-button">I'm not the decision-maker.</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapsible-section">
+                    <button class="collapsible-trigger" aria-expanded="true" aria-controls="upload-details">
+                        Your Sales Playbook <span class="arrow">▼</span>
+                    </button>
+                    <div id="upload-details" class="collapsible-content" style="display: block;">
+                        <p>Upload a document with your product info or sales framework to get tailored responses.</p>
+                         <label for="doc-upload" class="file-upload-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="upload-icon"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                            <p>Drag & drop your file here or</p>
+                            <span class="file-upload-label">Browse Files</span>
+                            <input type="file" id="doc-upload" accept=".pdf,.docx,.txt" hidden>
+                        </label>
+                        <div id="file-info" class="file-info" aria-live="polite"></div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
