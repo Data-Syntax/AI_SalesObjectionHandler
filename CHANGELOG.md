@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated `README.md` to begin tracking Lines of Code, reflecting an increase from a previous estimate of ~950 to the current ~1030.
 - Recalculated Lines of Code in `README.md` from ~1030 to ~1150 to reflect the current, accurate project size.
 
-## [1.0.0] - 2024-01-01
+## [1.0.0] - 2025-09-29
 
 ### Added
 - Initial version of the Sales Objection Handler application.
