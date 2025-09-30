@@ -1,4 +1,4 @@
-# Sales Objection Handler
+# AI Sales Objection Handler
 
 ### One-Liner
 An AI-powered web app that helps sales teams generate instant, structured rebuttals to customer objections, tailored by their own sales playbook.
